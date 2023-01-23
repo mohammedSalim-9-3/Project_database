@@ -1,0 +1,36 @@
+Create table department (
+ID number(6) Primary Key,
+NAME varchar2(10) Not Null
+);
+
+Create table doctors (
+ID number(6) Primary Key,
+NAME varchar2(10) Not Null , 
+phone number (9) not null , 
+dept_id number (6) REFERENCES department(id)
+);
+
+Create table PATIENT (
+ID number(6) Primary Key,
+FNAME varchar2(10) Not Null , 
+LNAME varchar2(10) not NULL , 
+phone number (9) not null , 
+dept_id number (6) REFERENCES department(id)
+nots varchar2 (100) 
+);
+
+create table visits (
+ id number (8) PRIMARY KEY , 
+ doctor_id number (6) REFERENCES doctors (id) , 
+ patient_id number (6) REFERENCES PATIENT (id) , 
+ medical_report varchar2( 100)
+);
+
+
+
+
+
+
+
+
+

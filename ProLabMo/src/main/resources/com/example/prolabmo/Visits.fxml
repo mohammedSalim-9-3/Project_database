@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="642.0" prefWidth="1042.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.prolabmo.visitsController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <AnchorPane prefHeight="631.0" prefWidth="1002.0">
+      <children>
+         <Button layoutX="778.0" layoutY="516.0" onAction="#Previous" prefHeight="55.0" prefWidth="147.0" text="Previous" />
+         <VBox layoutX="16.0" layoutY="94.0" prefHeight="187.0" prefWidth="111.0">
+            <children>
+               <Label prefHeight="21.0" prefWidth="26.0" text="ID" translateY="3.0" />
+               <Label prefHeight="41.0" prefWidth="96.0" text="DOCTOR_ID" translateY="36.0">
+                  <padding>
+                     <Insets bottom="20.0" />
+                  </padding>
+               </Label>
+               <Label prefHeight="21.0" prefWidth="108.0" text="PATIENT_ID" translateY="50.0" />
+               <Label text="medReport" translateY="70.0" />
+            </children>
+         </VBox>
+         <VBox layoutX="136.0" layoutY="102.0" prefHeight="261.0" prefWidth="204.0">
+            <children>
+               <TextField fx:id="tfId">
+                  <VBox.margin>
+                     <Insets bottom="10.0" />
+                  </VBox.margin>
+               </TextField>
+               <TextField fx:id="tfDocId" translateY="15.0" />
+               <TextField fx:id="tfPatId" translateY="35.0" />
+               <TextField fx:id="tfMedRep" translateY="50.0" />
+            </children>
+         </VBox>
+         <TableView fx:id="tvVis" layoutX="445.0" layoutY="30.0" prefHeight="351.0" prefWidth="480.0">
+           <columns>
+             <TableColumn fx:id="colId" prefWidth="96.0" text="ID" />
+             <TableColumn fx:id="colNameDoc" prefWidth="126.0" text="doctor's name" />
+               <TableColumn fx:id="colNamePat" prefWidth="120.0" text="Patient's name" />
+               <TableColumn fx:id="colMedRep" prefWidth="137.0" text="Medical_Report" />
+           </columns>
+         </TableView>
+         <ButtonBar layoutX="26.0" layoutY="519.0" prefHeight="49.0" prefWidth="289.0">
+           <buttons>
+             <Button mnemonicParsing="false" onAction="#insertVisit" prefHeight="56.0" text="Insert" />
+               <Button mnemonicParsing="false" onAction="#updateVisit" prefHeight="49.0" prefWidth="153.0" text="update" />
+               <Button mnemonicParsing="false" onAction="#deleteVisit" prefHeight="49.0" text="delete" />
+           </buttons>
+         </ButtonBar>
+         <Pagination layoutX="732.0" layoutY="396.0" prefHeight="56.0" prefWidth="193.0" />
+         <Label layoutX="11.0" layoutY="14.0" prefHeight="41.0" prefWidth="160.0" text="Visits&gt;">
+            <font>
+               <Font name="System Bold" size="31.0" />
+            </font>
+         </Label>
+      </children>
+   </AnchorPane>
+</VBox>
